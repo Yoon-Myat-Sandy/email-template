@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <title>Venuerific - Password Reset Email</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 20px;
+        background-color: #f3f4f6;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+          sans-serif;
+        line-height: 1.4;
+        width: 100%;
+      }
+
+      /* ----- MAIN CONTAINER ----- */
+      .email-wrapper {
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      /* ----- HEADER SECTION ----- */
+      .header {
+        text-align: center;
+        padding: 30px 20px;
+        background: #ffffff;
+      }
+
+      .logo {
+        height: 33px;
+        width: auto;
+        max-width: 180px;
+        display: inline-block;
+      }
+
+      .divider {
+        border-top: 1px solid #e5e7eb;
+        margin: 0;
+      }
+
+      /* ----- CONTENT SECTION ----- */
+      .content {
+        padding: 24px 24px;
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .lock-icon {
+        width: 120px;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1f1f1f;
+        margin-bottom: 30px;
+        line-height: 1.3;
+        text-align: center;
+      }
+
+      .greeting {
+        font-size: 14px;
+        color: #282828;
+        margin-bottom: 25px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .text {
+        font-size: 14px;
+        font-weight: 400;
+        color: #282828;
+        line-height: 1.5;
+        margin-bottom: 16px;
+        text-align: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* ----- BUTTON ----- */
+      .button {
+        display: block;
+        background-color: #2560f9;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        margin: 25px auto;
+        border: none;
+        max-width: 280px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .button:hover {
+        background-color: #4177ff;
+        text-decoration: none;
+      }
+
+      .support-link {
+        color: #2563eb;
+        font-weight: 600;
+        text-decoration: none;
+        word-break: break-all;
+        display: inline-block;
+      }
+
+      .support-link:hover {
+        text-decoration: underline;
+      }
+
+      .team {
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      /* ----- FOOTER SECTION ----- */
+      .footer {
+        font-size: 12px;
+        border-top: 1px solid #e5e7eb;
+        text-align: center;
+        padding: 35px 20px;
+        background-color: #ffffff;
+      }
+
+      .footer-links {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        row-gap: 8px;
+      }
+
+      .footer-links a {
+        color: #2560f9;
+        text-decoration: none;
+        font-size: 12px;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-links .sep {
+        color: #9ca3af;
+      }
+
+      .social-title {
+        color: #6a7583;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 13px;
+        text-align: center;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .social-icons img {
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        vertical-align: middle;
+        transition: opacity 0.2s ease;
+      }
+
+      .social-icons img:hover {
+        opacity: 0.8;
+      }
+
+      .copyright {
+        margin-top: 28px;
+        color: #282828;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.4;
+        text-align: center;
+      }
+
+      /* ----- RESPONSIVE MEDIA QUERIES ----- */
+      @media only screen and (max-width: 600px) {
+        body {
+          padding: 12px;
+        }
+        .content {
+          padding: 20px 24px;
+        }
+        .title {
+          font-size: 22px;
+          margin-bottom: 20px;
+        }
+        .lock-icon {
+          width: 90px;
+          margin-bottom: 20px;
+        }
+        .button {
+          padding: 12px 20px;
+          font-size: 14px;
+          max-width: 260px;
+        }
+        .text {
+          font-size: 13px;
+          margin-bottom: 14px;
+          max-width: 100%;
+        }
+        .greeting {
+          font-size: 13px;
+        }
+        .footer {
+          padding: 25px 16px;
+        }
+        .footer-links {
+          gap: 8px;
+        }
+        .footer-links a {
+          font-size: 11px;
+        }
+        .social-icons img {
+          width: 24px;
+          height: 24px;
+        }
+        .copyright {
+          font-size: 11px;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .content {
+          padding: 16px 20px;
+        }
+        .title {
+          font-size: 20px;
+        }
+        .button {
+          padding: 10px 16px;
+          font-size: 13px;
+          max-width: 90%;
+        }
+        .lock-icon {
+          width: 75px;
+        }
+        .text {
+          font-size: 12.5px;
+        }
+        .footer-links a {
+          font-size: 10px;
+        }
+      }
+
+      /* ----- OUTLOOK / EMAIL CLIENT COMPATIBILITY FIXES ----- */
+      .ExternalClass,
+      .ReadMsgBody {
+        width: 100%;
+        background-color: #f3f4f6;
+      }
+      table,
+      td {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="email-wrapper">
+      <div class="header">
+        <img src="vnf_logo.svg" class="logo" alt="Venuerific" />
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="content">
+        <img src="lock.svg" class="lock-icon" alt="Password reset lock" />
+
+        <div class="title">Reset Your Password</div>
+
+        <div class="greeting">Dear [User Name],</div>
+
+        <div class="text">
+          We received a request to reset the password for your Venuerific
+          account.
+        </div>
+
+        <div class="text">
+          To create a new password, please click the button or link below:
+        </div>
+
+        <a href="#" class="button">Reset Password</a>
+
+        <div class="text">
+          For security reasons, this password reset link will expire after
+          <strong>24 hours</strong>.
+        </div>
+
+        <div class="text">
+          If you did not request a password reset, you can safely ignore this
+          email. Your account will remain secure, and no changes will be made.
+        </div>
+
+        <div class="text">
+          If you need any assistance, please contact our support team at
+          <a href="mailto:info@venuerific.com" class="support-link">
+            info@venuerific.com
+          </a>
+        </div>
+
+        <div class="text">
+          Best regards,<br />
+          <span class="team">Venuerific Team</span>
+        </div>
+      </div>
+
+      <!-- Footer section -->
+      <div class="footer">
+        <div class="footer-links">
+          <a href="#">Venuerific Website</a>
+          <span class="sep">|</span>
+          <a href="#">Help Center</a>
+          <span class="sep">|</span>
+          <a href="#">Unsubscribe</a>
+          <span class="sep">|</span>
+          <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="social-title">Stay connected with us</div>
+
+        <div class="social-icons">
+          <img src="linkedin.svg" alt="LinkedIn" />
+          <img src="facebook.svg" alt="Facebook" />
+          <img src="instagram.svg" alt="Instagram" />
+        </div>
+
+        <div class="copyright">
+          Helping you celebrate since 2013<br />
+          Venuerific © 2024
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
